@@ -1,8 +1,8 @@
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++){
+for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++){
         let grid = document.createElement('div');
         grid.className = 'grid';
-        document.body.appendChild(grid);
+        container.appendChild(grid);
         grid.addEventListener('onmouseover', () => {
         })
     }
@@ -10,14 +10,14 @@ for (let i = 0; i < 16; i++) {
     document.body.appendChild(br);
 }
 
-const cell = document.querySelectorAll('.grid');
+/*const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('mouseover', function onmouseover(event) {
         event.target.style.backgroundColor = 'black';
     });
-}
+}*/
 
 const newGrid = document.querySelector('#newGrid');
 newGrid.addEventListener('click', function click(event) {
-    event.target.style.backgroundColor = 'blue';
+    prompt('Enter new grid size (Max: 100')
     });

@@ -5,9 +5,11 @@
 
 #container {
     display: grid;
-    grid-template-columns: repeats(var(--grid-rows), 1fr);
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    aspect-ratio: 1;
+    width: 600px;
+    height: 600px;
 }
 
 .grid-item {
@@ -18,8 +20,6 @@
 .grid {
     display: inline-block;
     border: 1px solid black;
-    height: 25px;
-    width: 25px;
     background: white;
 }
 
