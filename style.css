@@ -1,14 +1,13 @@
 #container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
     width: 600px;
     height: 600px;
     border: 5px dotted purple
 }
 
 .grid {
-    /*border: 0px solid black;*/
     background: white;
+    border: 1px black solid
 }
 
 #newGrid {

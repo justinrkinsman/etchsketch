@@ -3,12 +3,18 @@ for (let i = 0; i < 10; i++) {
         let grid = document.createElement('div');
         grid.className = 'grid';
         container.appendChild(grid);
-        grid.addEventListener('onmouseover', () => {
-        })
+        }
     }
-    let br = document.createElement('br');
-    document.body.appendChild(br);
-}
+
+
+function changeGrid() {
+    const gridSize = document.querySelector('#newGrid');
+    newGrid.addEventListener('click', function click(event) {
+        prompt('Enter new grid size (Max: 100)')
+        });
+    }
+
+document.getElementById('container').style.gridTemplateColumns = `repeat(10, 1fr)`;
 
 const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
@@ -17,7 +23,4 @@ for (let i = 0; i < cell.length; i++) {
     });
 }
 
-const newGrid = document.querySelector('#newGrid');
-newGrid.addEventListener('click', function click(event) {
-    prompt('Enter new grid size (Max: 100')
-    });
+changeGrid()
