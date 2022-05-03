@@ -1,5 +1,5 @@
-for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++){
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++){
         let grid = document.createElement('div');
         grid.className = 'grid';
         container.appendChild(grid);
@@ -10,12 +10,12 @@ for (let i = 0; i < 4; i++) {
     document.body.appendChild(br);
 }
 
-/*const cell = document.querySelectorAll('.grid');
+const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('mouseover', function onmouseover(event) {
         event.target.style.backgroundColor = 'black';
     });
-}*/
+}
 
 const newGrid = document.querySelector('#newGrid');
 newGrid.addEventListener('click', function click(event) {

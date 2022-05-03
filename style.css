@@ -1,28 +1,23 @@
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-}
-
 #container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0px;
-    aspect-ratio: 1;
+    grid-template-columns: repeat(10, 1fr);
     width: 600px;
     height: 600px;
-}
-
-.grid-item {
-    padding: 1em;
-    text-align: center;
+    border: 5px dotted purple
 }
 
 .grid {
-    display: inline-block;
-    border: 1px solid black;
+    /*border: 0px solid black;*/
     background: white;
 }
 
 #newGrid {
     display: flex;
+    height: 20px;
+    margin-left: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
 }
