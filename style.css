@@ -23,6 +23,6 @@
     background: white;
 }
 
-.grid:hover{
-    background: black;
+#newGrid {
+    display: flex;
 }
