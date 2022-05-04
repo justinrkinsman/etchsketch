@@ -1,13 +1,24 @@
-let xval = prompt()
+//let xval = prompt()
 
-for (let i = 0; i < xval; i++) {
-    for (let j = 0; j < xval; j++){
+document.querySelector('#newGrid');
+newGrid.addEventListener('click', function click(event) {
+    gridSize = prompt('Enter new grid size (Max: 100)')
+
+for (let i = 0; i < gridSize; i++) {
+    for (let j = 0; j < gridSize; j++){
         let grid = document.createElement('div');
         grid.className = 'grid';
         container.appendChild(grid);
         }
-        document.getElementById('container').style.gridTemplateColumns = `repeat(${xval}, 1fr)`;
+        document.getElementById('container').style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     }
+    const cell = document.querySelectorAll('.grid');
+for (let i = 0; i < cell.length; i++) {
+    cell[i].addEventListener('mouseover', function onmouseover(event) {
+        event.target.style.backgroundColor = 'black';
+    });
+}
+});
 
 function whiteGrid() {
     let white = document.querySelectorAll('.grid'), j;
@@ -15,15 +26,15 @@ function whiteGrid() {
         white[j].style.backgroundColor='white';
     }}
 
-const cell = document.querySelectorAll('.grid');
+/*const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('mouseover', function onmouseover(event) {
         event.target.style.backgroundColor = 'black';
     });
-}
+}*/
 
-document.querySelector('#newGrid');
+/*document.querySelector('#newGrid');
 newGrid.addEventListener('click', function click(event) {
     gridSize = prompt('Enter new grid size (Max: 100)')
     return gridSize
-    });
+    });*/
