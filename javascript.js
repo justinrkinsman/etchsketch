@@ -26,6 +26,14 @@ function whiteGrid() {
         white[j].style.backgroundColor='white';
     }}
 
+function resetGrid() {
+    const plainGrid = document.getElementById('container');
+    while (plainGrid.firstChild) {
+        plainGrid.removeChild(plainGrid.lastChild);
+    }
+    }
+
+
 /*const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('mouseover', function onmouseover(event) {
@@ -38,3 +46,5 @@ newGrid.addEventListener('click', function click(event) {
     gridSize = prompt('Enter new grid size (Max: 100)')
     return gridSize
     });*/
+
+    resetGrid();
