@@ -58,7 +58,17 @@ function rainbowPen() {
     }
 }
 
-function fadedPen() {
-    const cell = document.querySelectorAll('grid')
+function fadeIn() {
+    x = document.querySelectorAll('.grid');
+    
 }
-randomHue()
+
+function fadedPen() {
+    const cell = document.querySelectorAll('.grid')
+    for (let i = 0; i < cell.length; i++) {
+        cell [i].addEventListener('mouseover', function onmouseover(event) {
+            event.target.style.backgroundColor = 'black';
+            event.target.style.opacity = '0.1'
+        })
+    }
+}
