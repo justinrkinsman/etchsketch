@@ -7,16 +7,26 @@
 
 .grid {
     background: white;
-    border: 1px black solid
 }
 
-#newGrid {
+#newGrid, #black, #rainbow, #fade {
     display: flex;
-    height: 20px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 20px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     display: flex;
     flex-direction: row;
+}
+
+#buttonBox {
+    display: flex;
+    flex-direction: column;
+
 }
