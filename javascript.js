@@ -30,3 +30,35 @@ function resetGrid() {
         plainGrid.removeChild(plainGrid.lastChild);
     }
     }
+
+function blackPen() {
+    const cell = document.querySelectorAll('.grid');
+for (let i = 0; i < cell.length; i++) {
+    cell[i].addEventListener('mouseover', function onmouseover(event) {
+        event.target.style.backgroundColor = 'black';
+})}}
+
+function randomNumber(maxLimit = 360){
+    let rand = Math.random() * maxLimit;
+    rand = Math.floor(rand);
+    console.log(rand);
+}
+
+function randomHue(){
+    x = Math.floor(Math.random() * 360)
+    return (`hsl(${x}, 100%, 50%)`)
+}
+
+function rainbowPen() {
+    const cell = document.querySelectorAll('.grid');
+    for (let i = 0; i < cell.length; i++) {
+        cell [i].addEventListener('mouseover', function onmouseover(event) {
+            event.target.style.backgroundColor = randomHue()
+        })
+    }
+}
+
+function fadedPen() {
+    const cell = document.querySelectorAll('grid')
+}
+randomHue()
