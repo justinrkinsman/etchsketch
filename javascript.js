@@ -1,21 +1,19 @@
-//let xval = prompt()
+let xval = prompt()
 
-for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++){
+for (let i = 0; i < xval; i++) {
+    for (let j = 0; j < xval; j++){
         let grid = document.createElement('div');
         grid.className = 'grid';
         container.appendChild(grid);
         }
-        document.getElementById('container').style.gridTemplateColumns = `repeat(10, 1fr)`;
+        document.getElementById('container').style.gridTemplateColumns = `repeat(${xval}, 1fr)`;
     }
 
-//function newGridSize() {
-    document.querySelector('#newGrid');
-    newGrid.addEventListener('click', function click(event) {
-        const gridSize = prompt('Enter new grid size (Max: 100)')
-        return gridSize
-        });
-  //}
+function whiteGrid() {
+    let white = document.querySelectorAll('.grid'), j;
+    for (j = 0; j < white.length; ++j) {
+        white[j].style.backgroundColor='white';
+    }}
 
 const cell = document.querySelectorAll('.grid');
 for (let i = 0; i < cell.length; i++) {
@@ -24,4 +22,8 @@ for (let i = 0; i < cell.length; i++) {
     });
 }
 
-//newGridSize()
+document.querySelector('#newGrid');
+newGrid.addEventListener('click', function click(event) {
+    gridSize = prompt('Enter new grid size (Max: 100)')
+    return gridSize
+    });
