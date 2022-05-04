@@ -36,6 +36,7 @@ function blackPen() {
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('mouseover', function onmouseover(event) {
         event.target.style.backgroundColor = 'black';
+        event.target.style.opacity = 1
 })}}
 
 function randomNumber(maxLimit = 360){
@@ -54,21 +55,22 @@ function rainbowPen() {
     for (let i = 0; i < cell.length; i++) {
         cell [i].addEventListener('mouseover', function onmouseover(event) {
             event.target.style.backgroundColor = randomHue()
+            event.target.style.opacity = 1
         })
     }
 }
 
 function fadeIn() {
-    x = document.querySelectorAll('.grid');
-    
+    z = 0.1
+    return (z += 0.1);
 }
 
 function fadedPen() {
-    const cell = document.querySelectorAll('.grid')
-    for (let i = 0; i < cell.length; i++) {
-        cell [i].addEventListener('mouseover', function onmouseover(event) {
+    const fade = document.querySelectorAll('.grid')
+    for (let i = 0; i < fade.length; i++) {
+        fade [i].addEventListener('mouseover', function onmouseover(event) {
             event.target.style.backgroundColor = 'black';
-            event.target.style.opacity = '0.1'
+            event.target.style.opacity = fadeIn()
         })
     }
 }
